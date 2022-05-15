@@ -20,9 +20,23 @@ namespace TelegramChatWindowClone_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static MainWindow _window;
+
         public MainWindow()
         {
             InitializeComponent();
+            _window = this;
+        }
+
+        private void minimiseBtn_Click(object sender, RoutedEventArgs e) { this.WindowState = WindowState.Minimized; }
+        private void restoreBtn_Click(object sender, RoutedEventArgs e) { this.WindowState = WindowState.Normal; }
+        private void closeBtn_Click(object sender, RoutedEventArgs e) { Application.Current.Shutdown(); }
+        private void windowMove(object sender, RoutedEventArgs e)
+        {
+            if (Mouse.LeftButton == MouseButtonState.Pressed)
+            {
+                MainWindow._window.DragMove();
+            }
         }
     }
 }

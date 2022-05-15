@@ -99,8 +99,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\ico\" />
     <Folder Include="Resources\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ico\minimise.png" />
+    <Resource Include="Resources\ico\restore.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

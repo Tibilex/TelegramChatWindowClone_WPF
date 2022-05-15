@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TelegramChatWindowClone_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="900" Width="1620" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary Source="/GUI/styles/WindowStyle.xaml"/>
+    </Window.Resources>
+
+
+    <Grid MouseMove="windowMove">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!-- Header -->
+        <Grid Grid.Row="0" x:Name="header" Style="{StaticResource headerStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="30"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" x:Name="minimiseBtn" Style="{StaticResource WindowButtonStyle}" Content="{StaticResource minimiseicon}" Click="minimiseBtn_Click"/>
+            <Button Grid.Column="2" x:Name="restoreBtn" Style="{StaticResource WindowButtonStyle}" Content="{StaticResource restoreicon}" Click="restoreBtn_Click"/>
+            <Button Grid.Column="3" x:Name="closeBtn" Style="{StaticResource closeButtonStyle}" Content="X" Click="closeBtn_Click"/>
+        </Grid>
+        <!-- Main -->
+        <Grid Grid.Row="1" x:Name="main">
+            
+        </Grid>
     </Grid>
 </Window>
