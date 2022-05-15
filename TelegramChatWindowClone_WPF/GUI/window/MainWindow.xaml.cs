@@ -26,6 +26,7 @@ namespace TelegramChatWindowClone_WPF
         {
             InitializeComponent();
             _window = this;
+            chanelButtonData();
         }
 
         private void minimiseBtn_Click(object sender, RoutedEventArgs e) { this.WindowState = WindowState.Minimized; }
@@ -35,8 +36,13 @@ namespace TelegramChatWindowClone_WPF
         {
             if (Mouse.LeftButton == MouseButtonState.Pressed)
             {
-                MainWindow._window.DragMove();
+               MainWindow._window.DragMove();
             }
+        }
+
+        private void chanelButtonData()
+        {
+            
         }
     }
 }

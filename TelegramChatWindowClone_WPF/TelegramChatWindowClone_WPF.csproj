@@ -99,11 +99,27 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\img\" />
+    <Resource Include="Resources\img\it.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\ico\minimise.png" />
     <Resource Include="Resources\ico\restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ico\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\img\apk.png" />
+    <Resource Include="Resources\img\cat.png" />
+    <Resource Include="Resources\img\earth.png" />
+    <Resource Include="Resources\img\excel.png" />
+    <Resource Include="Resources\img\fact2.png" />
+    <Resource Include="Resources\img\facts.png" />
+    <Resource Include="Resources\img\figma.png" />
+    <Resource Include="Resources\img\sql.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\img\milky.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

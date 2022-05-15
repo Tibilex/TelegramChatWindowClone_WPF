@@ -25,13 +25,208 @@
                 <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" x:Name="minimiseBtn" Style="{StaticResource WindowButtonStyle}" Content="{StaticResource minimiseicon}" Click="minimiseBtn_Click"/>
-            <Button Grid.Column="2" x:Name="restoreBtn" Style="{StaticResource WindowButtonStyle}" Content="{StaticResource restoreicon}" Click="restoreBtn_Click"/>
+            <Button Grid.Column="1" x:Name="minimiseBtn" Style="{StaticResource WindowButtonStyle}" Content="{StaticResource minimiseIcon}" Click="minimiseBtn_Click"/>
+            <Button Grid.Column="2" x:Name="restoreBtn" Style="{StaticResource WindowButtonStyle}" Content="{StaticResource restoreIcon}" Click="restoreBtn_Click"/>
             <Button Grid.Column="3" x:Name="closeBtn" Style="{StaticResource closeButtonStyle}" Content="X" Click="closeBtn_Click"/>
         </Grid>
         <!-- Main -->
         <Grid Grid.Row="1" x:Name="main">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="340"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
             
+            <!-- Left chats & groups menu -->
+            <Border Grid.Column="0" Style="{StaticResource borderStyle}" Margin="0 -1 -2 0">
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+    
+                    <!-- Menu & search grid-->
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0" Content="{StaticResource menuIcon}" Style="{StaticResource navButton}"/>
+                        <TextBox Style="{StaticResource textBoxStyle}"  Grid.Column="1" />
+                    </Grid>
+
+                    <!-- Grous & chats-->
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Button Grid.Row="0" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/it.png"/>
+                                <TextBlock Grid.Column="1" Text="Программирование" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Теория и практика анализа" Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="14:55" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="159" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="1" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/apk.png"/>
+                                <TextBlock Grid.Column="1" Text="EASY APK" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="ezMOD 1.9.9.4" Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="17:07" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="120" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="2" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/cat.png"/>
+                                <TextBlock Grid.Column="1" Text="Котофей" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Подготовка к атаке важней..." Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="17:05" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="11" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="3" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/earth.png"/>
+                                <TextBlock Grid.Column="1" Text="САМЫЕ КРАСИВЫЕ МЕСТА" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Таиланд, Корабли" Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="13:46" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="461" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="4" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/excel.png"/>
+                                <TextBlock Grid.Column="1" Text="Excel Hacks" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Округление чисел до 10" Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="16:15" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="4" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="5" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/facts.png"/>
+                                <TextBlock Grid.Column="1" Text="Краткие факты" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Инженеры из Toyota содали..." Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="16:07" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="365" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="6" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/milky.png"/>
+                                <TextBlock Grid.Column="1" Text="Млечный путь" Style="{StaticResource textNameChanelStyle}" Foreground="White"/>
+                                <TextBlock Grid.Column="1" Text="Ракетный сад" Style="{StaticResource txtMsgChanelStyle}" Foreground="White"/>
+                                <TextBlock Grid.Column="2" Text="17:05" Style="{StaticResource txtMsgTimeChanelStyle}" Foreground="White"/>
+                                <Button Grid.Column="2" Content="2" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="7" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/fact2.png"/>
+                                <TextBlock Grid.Column="1" Text="Факториум" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Ноль - единственное в матем..." Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="16:12" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="105" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="8" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/figma.png"/>
+                                <TextBlock Grid.Column="1" Text="Макеты для вёрстки" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="Penovate Жанр:биржа для..." Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="СБ" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="17" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                        <Button Grid.Row="9" Style="{StaticResource chanelButtonStyle}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="80"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="50"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.Column="0" Source="/Resources/img/sql.png"/>
+                                <TextBlock Grid.Column="1" Text="Базы данных" Style="{StaticResource textNameChanelStyle}"/>
+                                <TextBlock Grid.Column="1" Text="познакомьтесь с проффесией" Style="{StaticResource txtMsgChanelStyle}"/>
+                                <TextBlock Grid.Column="2" Text="17:00" Style="{StaticResource txtMsgTimeChanelStyle}"/>
+                                <Button Grid.Column="2" Content="27" Style="{StaticResource roundedCounterStyle}"/>
+                            </Grid>
+                        </Button>
+                                
+                    </Grid>
+                </Grid>
+            </Border>
+            <!-- Chats Window-->
+            <Border Grid.Column="1" Style="{StaticResource borderStyle}" Margin="0 -1 0 0">
+                <Grid Grid.Column="1">
+                
+                </Grid>
+            </Border>
+            <!-- Right Group info menu -->
+            <Border Grid.Column="1" Style="{StaticResource borderStyle}" Margin="0 -1 0 0">
+                <Grid Grid.Column="2">
+                
+                </Grid>
+            </Border>
         </Grid>
     </Grid>
 </Window>
