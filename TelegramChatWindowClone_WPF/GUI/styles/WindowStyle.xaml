@@ -9,6 +9,10 @@
     <Image x:Key="minimiseIcon" Source="/resources/ico/minimise.png" RenderOptions.BitmapScalingMode="Fant"/>
     <Image x:Key="restoreIcon" Source="/resources/ico/restore.png" RenderOptions.BitmapScalingMode="Fant"/>
     <Image x:Key="menuIcon" Source="/resources/ico/menu.png" RenderOptions.BitmapScalingMode="Fant"/>
+    <Image x:Key="searchIcon" Source="/resources/ico/search.png" RenderOptions.BitmapScalingMode="Fant"/>
+    <Image x:Key="hideIcon" Source="/resources/ico/hideInfo.png" RenderOptions.BitmapScalingMode="Fant"/>
+    <Image x:Key="propIcon" Source="/resources/ico/prop.png" RenderOptions.BitmapScalingMode="Fant"/>
+    <Image x:Key="chatBackground" Source="/resources/img/back.png" RenderOptions.BitmapScalingMode="Fant"/>
 
     <Style x:Key="headerStyle" TargetType="Grid">
         <Setter Property="Background" Value="{StaticResource Color.Gray}"/>
@@ -186,5 +190,20 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+    <Style x:Key="notifyTextBlockStyle" TargetType="TextBlock">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource Color.Blue}"/>
+        <Setter Property="FontWeight" Value="SemiBold"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
+    <Style x:Key="roundedBorderStyle" TargetType="Border">
+        <Setter Property="CornerRadius" Value="6"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="BorderBrush" Value="White"/>
+        <Setter Property="Margin" Value="15"/>
     </Style>
 </ResourceDictionary>

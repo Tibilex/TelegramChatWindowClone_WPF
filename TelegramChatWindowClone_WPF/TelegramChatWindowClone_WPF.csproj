@@ -121,5 +121,17 @@
   <ItemGroup>
     <Resource Include="Resources\img\milky.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ico\hideInfo.png" />
+    <Resource Include="Resources\ico\prop.png" />
+    <Resource Include="Resources\ico\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\img\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\img\space.png" />
+    <Resource Include="Resources\img\space2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
