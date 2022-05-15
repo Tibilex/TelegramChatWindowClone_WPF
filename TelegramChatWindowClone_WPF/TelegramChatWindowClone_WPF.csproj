@@ -133,5 +133,19 @@
     <Resource Include="Resources\img\space.png" />
     <Resource Include="Resources\img\space2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\img\milky2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ico\gif.png" />
+    <Resource Include="Resources\ico\info.png" />
+    <Resource Include="Resources\ico\leave.png" />
+    <Resource Include="Resources\ico\link.png" />
+    <Resource Include="Resources\ico\notify.png" />
+    <Resource Include="Resources\ico\photo.png" />
+    <Resource Include="Resources\ico\report.png" />
+    <Resource Include="Resources\ico\video.png" />
+    <Resource Include="Resources\ico\voice.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

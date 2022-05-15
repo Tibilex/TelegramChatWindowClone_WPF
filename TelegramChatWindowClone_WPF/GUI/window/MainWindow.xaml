@@ -292,9 +292,96 @@
                 </Grid>
             </Border>
             <!-- Right Group info menu -->
-            <Border Grid.Column="1" Style="{StaticResource borderStyle}" Margin="0 -1 0 0">
-                <Grid Grid.Column="2">
-                
+            <Border Grid.Column="2" Style="{StaticResource borderStyle}" Margin="-1 -1 0 0">
+                <Grid Grid.Column="2" Background="{StaticResource Color.Gray}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="160"/>
+                        <RowDefinition Height="360"/>
+                        <RowDefinition Height="220"/>
+                        <RowDefinition Height="130"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Background="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Информация о канале" Style="{StaticResource textNameChanelStyle}" Margin="16 16 0 0 "/>
+                        <Image Grid.Row="1" Source="/Resources/img/milky2.png" HorizontalAlignment="left"/>
+                        <TextBlock Grid.Row="1" Text="Млечный Путь" Style="{StaticResource textNameChanelStyle}" Margin="110 26 0 0" FontSize="18"/>
+                        <TextBlock Grid.Row="1" Text="202 189 подписчиков" Style="{StaticResource txtMsgChanelStyle}" Margin="110 56 0 0" FontSize="14"/>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Background="White" Margin="-1 10 0 10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="66"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.Row="0" Source="/Resources/ico/info.png" Margin="14 0 14 14"/>
+                        <Grid Grid.Column="1" Grid.Row="0">
+                            <TextBlock Text="t.me/mlechneyput" Style="{StaticResource txtLinklStyle}"/>
+                            <TextBlock Text="Ссылка" Style="{StaticResource  txtMsgChanelStyle}"/>
+                        </Grid>
+                        <TextBlock  Grid.Column="1" Grid.Row="1" Text="Авторский канал о космосе" Style="{StaticResource  txtMsgChanelStyle}" Foreground="Black" Margin="10 0 0 0"/>
+                        <Grid Grid.Column="1" Grid.Row="2">
+                            <TextBlock Text="Создатель/Реклама -" Style="{StaticResource  txtMsgChanelStyle}" Margin="10 0 0 0" Foreground="Black"/>
+                            <TextBlock Text="@sergrydeneshkin" Style="{StaticResource  txtLinklStyle}" Margin="10 20 0 0"/>
+                            <TextBlock Text="Помощники -" Style="{StaticResource  txtMsgChanelStyle}" Margin="10 40 0 0" Foreground="Black"/>
+                            <TextBlock Text="@MacFrolov" Style="{StaticResource  txtLinklStyle}" Margin="102 40 0 0"/>
+                            <TextBlock Text="Информация" Style="{StaticResource  txtMsgChanelStyle}" Margin="10 60 0 0"/>
+                        </Grid>
+                        <Image Grid.Column="0" Grid.Row="3" Source="/Resources/ico/notify.png" Margin="16 20 20 0"/>
+                        <TextBlock Grid.Column="1" Grid.Row="3" Text="Уведомления" Style="{StaticResource  txtMsgChanelStyle}" Margin="10 40 0 0" Foreground="Black"/>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Column="0" Grid.Row="0" Source="/Resources/ico/photo.png" Margin="7"/>
+                        <Image Grid.Column="0" Grid.Row="1" Source="/Resources/ico/video.png" Margin="7"/>
+                        <Image Grid.Column="0" Grid.Row="2" Source="/Resources/ico/link.png" Margin="7"/>
+                        <Image Grid.Column="0" Grid.Row="3" Source="/Resources/ico/voice.png" Margin="7"/>
+                        <Image Grid.Column="0" Grid.Row="4" Source="/Resources/ico/gif.png" Margin="6 0 6 5"/>
+
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="3225 фотографий" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 10 0 0" Foreground="Black"/>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="1125 видео" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 10 0 0" Foreground="Black"/>
+                        <TextBlock Grid.Column="1" Grid.Row="2" Text="30 ссылок" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 10 0 0" Foreground="Black"/>
+                        <TextBlock Grid.Column="1" Grid.Row="3" Text="3 голосовых сообщения" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 10 0 0" Foreground="Black"/>
+                        <TextBlock Grid.Column="1" Grid.Row="4" Text="753 GIF" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 10 0 0" Foreground="Black"/>
+                    </Grid>
+                    
+                    <Grid Grid.Row="3" Background="White" Margin="-1 10 0 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        
+                        <Image Grid.Column="0" Grid.Row="0" Source="/Resources/ico/leave.png" Margin="12 10 10 0"/>
+                        <Image Grid.Column="0" Grid.Row="1" Source="/Resources/ico/report.png" Margin="12 0 10 10"/>
+                        <TextBlock Grid.Column="1" Grid.Row="0" Text="Покинуть канал" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 24 0 0" Foreground="Black"/>
+                        <TextBlock Grid.Column="1" Grid.Row="1" Text="Пожаловатсья" Style="{StaticResource  txtMsgChanelStyle}" Margin="20 14 0 0" Foreground="#e14e4e"/>
+                    </Grid>
                 </Grid>
             </Border>
         </Grid>
